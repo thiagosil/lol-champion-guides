@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
       champions =>
       {
         this.champions = champions;
-        return this.champions.forEach( champion => champion.url = `http://www.lolking.net/guides/champion/${champion.name}`;
+        return this.champions.forEach( champion => champion.url = `http://www.lolking.net/guides/champion/${champion.name}`);
       }
     );
   }
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
     this.getChampions();
   }
 
-  filterChampions(championName){
+  filterChampions(championName: string){
     if(!championName)
     {
       this.getChampions();
@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  goToUrl(url){
+  goToUrl(url: string){
      window.location.href = url;
   }
 }
