@@ -1,5 +1,5 @@
+///<reference path="riot-games-api.d.ts" />
 import { Component, OnInit } from '@angular/core';
-import { Champion } from './champion';
 import { ChampionService } from './champion.service';
 
 @Component({
@@ -11,8 +11,8 @@ import { ChampionService } from './champion.service';
 
 export class AppComponent implements OnInit {
   title = 'Tour of Heroes';
-  champion = new Champion();
-  champions: Champion[];
+  champion: RiotGamesAPI.LolStaticData.ChampionDto;
+  champions: RiotGamesAPI.LolStaticData.ChampionDto[];
 
 
   constructor(private championService: ChampionService) { }
@@ -22,7 +22,6 @@ export class AppComponent implements OnInit {
       champions =>
       {
         this.champions = champions;
-        return this.champions.forEach( champion => champion.url = `http://www.lolking.net/guides/champion/${champion.name}`);
       }
     );
   }
@@ -36,9 +35,11 @@ export class AppComponent implements OnInit {
       this.getChampions();
     }
 
-    this.champions = this.champions.filter(function (el) {
+/*
+    this.champions = this.champions.data.filter(function (el) {
         return (el.name.toUpperCase().includes(championName.toUpperCase()));
     });
+    */
   }
 
   goToUrl(url: string){
