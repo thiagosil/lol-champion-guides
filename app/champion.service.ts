@@ -8,7 +8,6 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class ChampionService {
   private championsUrl = "https://global.api.pvp.net/api/lol/static-data/br/v1.2/champion?api_key=c4ff4533-ac86-45d0-b871-8c536c48c977";
-  //private championsUrl = "http://ddragon.leagueoflegends.com/cdn/6.12.1/data/en_US/champion.json";
 
   constructor(private http: Http) { }
 

@@ -27,6 +27,7 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
     this.getChampions();
+    this.champion = {};
   }
 
   filterChampions(championName: string){
@@ -35,11 +36,11 @@ export class AppComponent implements OnInit {
       this.getChampions();
     }
 
-/*
-    this.champions = this.champions.data.filter(function (el) {
+
+    this.champions = this.champions.filter(function (el) {
         return (el.name.toUpperCase().includes(championName.toUpperCase()));
     });
-    */
+
   }
 
   goToUrl(url: string){
