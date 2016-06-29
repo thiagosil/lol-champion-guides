@@ -11,7 +11,7 @@ import { ChampionService } from './champion.service';
 
 export class AppComponent implements OnInit {
   title = 'Tour of Heroes';
-  champion: RiotGamesAPI.LolStaticData.ChampionDto;
+  championName: string;
   champions: RiotGamesAPI.LolStaticData.ChampionDto[];
 
 
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
     this.getChampions();
-    this.champion = {};
+    this.championName = "";
   }
 
   filterChampions(championName: string){

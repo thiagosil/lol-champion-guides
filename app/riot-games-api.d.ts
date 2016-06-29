@@ -299,6 +299,7 @@ declare namespace RiotGamesAPI{
 			tags: Array<string>,
 			title: string,
       url: string
+			imageUrl?: string
 		}
 		interface ChampionSpellDto{
 			altimages: Array<ImageDto>,

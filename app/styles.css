@@ -6,27 +6,17 @@
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
-  width: 15em;
 }
 .heroes li {
   cursor: pointer;
   position: relative;
   left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
 }
 .heroes li.selected:hover {
   background-color: #BBD8DC !important;
   color: white;
 }
-.heroes li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
-}
+
 .heroes .text {
   position: relative;
   top: -3px;
@@ -44,4 +34,48 @@
   height: 1.8em;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
+}
+
+section.hero-section {
+    background: #3a5395;
+    color: #fff;
+    padding-top: 75px;
+}
+
+section {
+    min-height: 550px;
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.marketing-section .container {
+    position: absolute;
+}
+
+.container {
+    margin: auto;
+    width: 100%;
+    max-width: 940px;
+    float: none;
+}
+
+bloc-3 {
+
+}
+
+section .bloc-3 img {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    float: none;
+    padding: 0 16px 16px;
+    max-width: 140px;
+}
+
+.fl-left {
+    float: left;
+}
+.bloc-3 {
+    width: 15%;
 }

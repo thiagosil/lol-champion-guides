@@ -7,7 +7,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Injectable()
 export class ChampionService {
-  private championsUrl = "https://global.api.pvp.net/api/lol/static-data/br/v1.2/champion?api_key=c4ff4533-ac86-45d0-b871-8c536c48c977";
+  private championsUrl = "https://global.api.pvp.net/api/lol/static-data/na/v1.2/champion?api_key=c4ff4533-ac86-45d0-b871-8c536c48c977";
 
   constructor(private http: Http) { }
 
@@ -21,7 +21,12 @@ export class ChampionService {
 
                 var keys: string[] = Object.keys(championList.data).sort();
 
-                keys.forEach(element => champions.push(championList.data[element]));
+                keys.forEach( element => {
+                  console.log(element);
+                  championList.data[element].imageUrl  = this.getImageUrl(element);
+                  champions.push(championList.data[element])
+                }
+              );
                 return champions;
               })
               .catch(this.handleError);
@@ -30,5 +35,10 @@ export class ChampionService {
   private handleError(error: any) {
     console.error('An error occurred', error);
     return Promise.reject(error.message || error);
+  }
+
+  private getImageUrl(championName: string): string
+  {
+    return `http://ddragon.leagueoflegends.com/cdn/6.13.1/img/champion/${championName}.png`;
   }
 }
