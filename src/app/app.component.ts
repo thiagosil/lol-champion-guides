@@ -10,7 +10,7 @@ import { ChampionService } from './champion.service';
 })
 
 export class AppComponent implements OnInit {
-  title = 'Tour of Heroes';
+  title = 'Lol Guides';
   championName: string;
   champions: RiotGamesAPI.LolStaticData.ChampionDto[];
 

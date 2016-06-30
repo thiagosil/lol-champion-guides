@@ -1,0 +1,1 @@
+/Users/thiago/sandbox/lol-champion-guides/tmp/vendor-input_base_path-KtovMtOh.tmp/0/reflect-metadata/typings/node.d.ts

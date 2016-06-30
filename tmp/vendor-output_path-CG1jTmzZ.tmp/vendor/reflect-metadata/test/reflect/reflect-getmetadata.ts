@@ -1,0 +1,1 @@
+/Users/thiago/sandbox/lol-champion-guides/tmp/vendor-input_base_path-XZZ7y7HF.tmp/0/reflect-metadata/test/reflect/reflect-getmetadata.ts

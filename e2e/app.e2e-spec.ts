@@ -7,8 +7,8 @@ describe('lol-champion-guides App', function() {
     page = new LolChampionGuidesPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display the a welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Lol Guide Index');
   });
 });
