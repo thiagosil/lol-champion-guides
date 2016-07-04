@@ -23,6 +23,7 @@ export class ChampionService {
 
                 keys.forEach( element => {
                   championList.data[element].imageUrl  = this.getImageUrl(element);
+                  championList.data[element].lolKingUrl  = this.getLolKingUrl(element);
                   champions.push(championList.data[element])
                 }
               );
@@ -39,5 +40,10 @@ export class ChampionService {
   private getImageUrl(championName: string): string
   {
     return `http://ddragon.leagueoflegends.com/cdn/6.13.1/img/champion/${championName}.png`;
+  }
+
+  private getLolKingUrl(championName: string): string
+  {
+      return `http://www.lolking.net/guides/champion/${championName}`;
   }
 }

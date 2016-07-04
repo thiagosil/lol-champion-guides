@@ -17,8 +17,9 @@
     <ul class="heroes">
       <li *ngFor="let champion of champions " (click)="goToUrl(champion.url)">
         <div class="fl-left bloc-3">
-          <img src="{{champion.imageUrl}}">
-
+          <a href="{{champion.lolKingUrl}}">
+            <img src="{{champion.imageUrl}}">
+          </a>
         </div>
 
       </li>

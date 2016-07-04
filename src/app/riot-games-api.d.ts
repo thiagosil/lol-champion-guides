@@ -298,8 +298,9 @@ declare namespace RiotGamesAPI{
 			stats: StatsDto,
 			tags: Array<string>,
 			title: string,
-      url: string
-			imageUrl?: string
+      url: string,
+			imageUrl?: string,
+			lolKingUrl?: string
 		}
 		interface ChampionSpellDto{
 			altimages: Array<ImageDto>,
